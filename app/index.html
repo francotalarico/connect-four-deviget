@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Connect four - Deviget</title>
+
+		<link type="text/css" rel="stylesheet" href="styles/style.css" media="screen">
+	</head>
+	<body ng-app="connect-four-deviget">
+
+		<div class="container">
+
+			<div id="app" ng-controller="GameCtrl" ng-cloak>
+
+				<div ng-include="'views/browser-support.html'"></div>
+
+				<div ng-include="'views/turn-indicator.html'"></div>
+
+				<div ng-include="'views/grid.html'"></div>
+
+				<div ng-include="'views/modal.html'"></div>
+
+			</div>
+
+		</div>
+
+
+		<!-- Dependencies -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+		<script type="text/javascript" src="../bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+		<script type="text/javascript" src="../bower_components/lodash/lodash.min.js"></script>
+		
+		<!-- Scripts -->
+		<script type="text/javascript" src="scripts/services/game.js"></script>
+		<script type="text/javascript" src="scripts/app.js"></script>
+		<script type="text/javascript" src="scripts/controllers/GameCtrl.js"></script>
+
+	</body>
+</html>

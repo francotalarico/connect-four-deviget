@@ -1,0 +1,27 @@
+<div class="modal" ng-show="modal">
+    <div class="bg"></div>
+    <a class="close" href="javascript:void(0);" ng-click="restart()">&times;</a>
+    <div class="content">
+        <div class="modal-begin" ng-show="currentModal('begin')">
+            <h2>Connect four</h2>
+            <p>Press "start game" to create an instance of the game.</p>
+            <p class="actions">
+                <a href="javascript:void(0);" class="btn" ng-click="toggleModal()">Start game</a>
+            </p>
+        </div>
+        <div class="modal-win" ng-show="currentModal('win')">
+            <h2>Congratulations, player {{player}}!</h2>
+            <p>You win.</p>
+            <p class="actions">
+                <a href="javascript:void(0);" class="btn" ng-click="restart()">Restart game</a>
+            </p>
+        </div>
+        <div class="modal-draw" ng-show="currentModal('draw')">
+            <h2>Nobody wins.</h2>
+            <p>Game over. Try again?</p>
+            <p class="actions">
+                <a href="javascript:void(0);" class="btn" ng-click="restart()">Restart game</a>
+            </p>
+        </div>
+    </div>
+</div>
